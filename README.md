@@ -20,13 +20,13 @@ This running example uses the Node.js SDK. To get started, install the cumulio p
 Within your script, require this package and then connect to Cumul.io with your application API key and secret token. You can get a token for your application by dropping us an e-mail at support@cumul.io.
 
 >// Include the Cumul.io SDK
-var Cumulio = require('cumulio');
+>var Cumulio = require('cumulio');
 
 >// Set API key and token
-var client = new Cumulio({
-  api_key: 'Your API key',
-  api_token: 'Your API token'
-});
+>var client = new Cumulio({
+>  api_key: 'Your API key',
+>  api_token: 'Your API token'
+>});
 
 ##Example: pushing data points
 
