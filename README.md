@@ -9,7 +9,8 @@ We also offer native SDKs (software development kits), currently for Node.js, PH
 
 Each API request should contain your API key and token, which are used to authorize the requested action or restrict result sets to only records you are allowed to retrieve. You can create a new API key and token via the Integration management page. All API calls are made over a secured connection via SSL (Secure WebSocket) to https://api.cumul.io on port 443.
 
-##Example: connecting to Cumul.io
+##Examples
+###Connecting
 
 This running example uses the Node.js SDK. To get started, install the cumulio package from npm by running:
 > npm install cumulio
@@ -25,29 +26,28 @@ Within your script, require this package and then connect to Cumul.io with your 
 >  api_token: 'Your API token'
 >});
 
-##Example: pushing data points
+### Pushing data points
 
 This example uses the Create action on the Data resource to push new data points into an existing dataset. This will also immediately bring all dashboards based on this dataset up-to-date.
 
 To load the dataset initially, you might want to upload a CSV file with the first set of rows manually, to create the column structure. You can retrieve the dataset ID from the URL.
-
 >// Push 2 data points to a (pre-existing) dataset
-client.create(
-  'data',
-  {
-    securable_id: 'Your dataset id',
-    data: [
-      ['plaice', 2014, 2.1234, 751],
-      ['plaice', 2015, 1.8765, 573]
-    ]
-  })
-  .then(function() {
-    console.log('Success!');
-  })
-  .catch(function(error) {
-    console.error('API error:', error);
-  })
-  .finally(function() {
+>client.create(
+>  'data',
+>  {
+>    securable_id: 'Your dataset id',
+>    data: [
+>      ['plaice', 2014, 2.1234, 751],
+>      ['plaice', 2015, 1.8765, 573]
+>    ]
+>  })
+>  .then(function() {
+>    console.log('Success!');
+>  })
+>  .catch(function(error) {
+>    console.error('API error:', error);
+>  })
+>  .finally(function() {
     client.close();
   });
 
