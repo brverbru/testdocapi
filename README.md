@@ -1,5 +1,3 @@
-#API documentation
-#Getting started
 
 The Cumul.io API makes it possible to interact with Cumul.io in a programmatic way, for example to create datasets and dashboards, push real-time data, develop your own custom integrations to data sources or retrieve sliced & diced, aggregated data from your datasets.
 
@@ -18,7 +16,6 @@ This running example uses the Node.js SDK. To get started, install the cumulio p
 
 
 Within your script, require this package and then connect to Cumul.io with your application API key and secret token. You can get a token for your application by dropping us an e-mail at support@cumul.io.
-
 >// Include the Cumul.io SDK
 >var Cumulio = require('cumulio');
 
